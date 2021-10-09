@@ -1,0 +1,184 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*iGEM Team Moscow Styles*/
+
+#team-moscow-content {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#team-moscow-content a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#team-moscow-content .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#team-moscow-content .header {
+  background-color: #656765;
+  background-image: url(/img/homeBg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#team-moscow-content.default .header {
+  background-image: url(/img/templateBg.jpg);
+}
+
+#team-moscow-content .header .menu {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#team-moscow-content .header .nav .nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+#team-moscow-content .header .nav .nav-menu .nav-menu-item {
+  margin: 0 10px;
+}
+
+#team-moscow-content .header .nav .nav-menu .nav-menu-item > ul {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #656765;
+  text-transform: none;
+}
+
+#team-moscow-content .header .nav .nav-menu .nav-menu-item > ul > li {
+  margin-top: 8px;
+}
+
+#team-moscow-content .header .nav .nav-menu .nav-menu-item:hover > ul {
+  display: flex;
+}
+
+#team-moscow-content .header .title {
+  padding-top: 90px;
+  padding-bottom: 144px;
+}
+
+#team-moscow-content .header h1.heading1 {
+  font-size: 70px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+#team-moscow-content .footer {
+  background-color: #B0B0B0;
+  padding-bottom: 20px;
+}
+
+#team-moscow-content .footer .nav {
+  background-color: #E5E5E5;
+}
+
+#team-moscow-content .footer .nav .nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #4F4F4F;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+#team-moscow-content .footer .nav .nav-menu .nav-menu-item > a {
+  font-weight: bold;
+}
+
+#team-moscow-content.default #main-container > .wrapper-columns {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  min-height: 40vh;
+}
+
+#team-moscow-content.default #main-container > .wrapper-columns .main {
+  box-sizing: border-box;
+  width: 80%;
+  margin-left: auto;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+  background-color: #898989;
+  color: #fff;
+}
+
+#team-moscow-content.default #main-container > .wrapper-columns .main .heading2 {
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: #898989;
+  font-size: 30px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  text-shadow: #fff 1px 0, #fff .540302px .841471px, #fff -.416147px .909297px, #fff -.989992px .14112px, #fff -.653644px -.756802px, #fff .283662px -.958924px, #fff .96017px -.279415px;
+}
+
+#team-moscow-content.default #main-container > .wrapper-columns .aside {
+  margin-right: 30px;
+}
