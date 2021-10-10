@@ -182,3 +182,39 @@ table {
 #team-moscow-content.default #main-container > .wrapper-columns .aside {
   margin-right: 30px;
 }
+
+
+#team-moscow-content.default #main-container > .wrapper-columns .left-menu {
+  position: sticky;
+  top: 40px;
+}
+
+#team-moscow-content.default #main-container > .wrapper-columns .left-menu li {
+  margin: 20px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1.25px;
+  color: #9e9e9e;
+  cursor: pointer;
+}
+
+#team-moscow-content.default #main-container > .wrapper-columns .left-menu li.active,
+#team-moscow-content.default #main-container > .wrapper-columns .left-menu li:hover {
+  color: #000;
+}
+
+#team-moscow-content.default #main-container > .wrapper-columns .left-menu li::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-bottom: -2px;
+  background-color: #9e9e9e;
+}
+
+#team-moscow-content.default #main-container > .wrapper-columns .left-menu li.active::before {
+  background-color: #ffd402;
+}

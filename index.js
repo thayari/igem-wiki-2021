@@ -11,6 +11,7 @@ class Main {
     this.dom = null
 
     this.isDefault = false
+    this.isScrolling = false
   }
 
   init() {
@@ -18,15 +19,32 @@ class Main {
 
     this.isDefault = this.dom.classList.contains('default')
 
-    this.generateTopMenu()
+    this.generateMainMenu()
 
     if (this.isDefault) {
-      this.UI.leftMenu = this.dom.querySelector('#nav-left .left-menu')
       this.generateLeftMenu()
+    }
+
+    window.addEventListener("scroll", throttleScroll, false);
+
+    function throttleScroll(e) {
+      if (isScrolling == false) {
+        window.requestAnimationFrame(function () {
+          onScroll(e);
+          this.isScrolling = false;
+        });
+      }
+      isScrolling = true;
+    }
+
+    function onScroll(e) {
+      if (this.isDefault && this.UI.leftMenu) {
+        console.log(this.UI.leftMenu.menuItems)
+      }
     }
   }
 
-  generateTopMenu() {
+  generateMainMenu() {
     const { menu } = this.data
     this.UI.topMenu = new Menu(menu, this.dom.querySelector('#top-nav-menu'))
     this.UI.bottomMenu = new Menu(menu, this.dom.querySelector('#bottom-nav-menu'))
@@ -34,14 +52,18 @@ class Main {
 
   generateLeftMenu() {
     const headings = Array.from(this.dom.querySelectorAll('.heading2'))
-    let fragment = document.createDocumentFragment()
-    for (const heading of headings) {
-      const li = document.createElement('li')
-      li.textContent = heading.textContent
-      fragment.appendChild(li)
-    }
-    this.UI.leftMenu.appendChild(fragment)
+    const menu = headings.map((value, index) => {
+      return {
+        element: value,
+        textContent: value.textContent,
+        id: index
+      }
+    })
+
+    this.UI.leftMenu = new AsideMenu(menu, this.dom.querySelector('#nav-left .left-menu'))
   }
+
+
 }
 
 class Menu {
@@ -91,8 +113,34 @@ class Menu {
       this.menuItems.push(newMenuItem)
       fragment.appendChild(newMenuItem.item)
     }
-    
+
     this.element.appendChild(fragment)
+  }
+}
+
+class AsideMenu extends Menu {
+  constructor(itemsData, element) {
+    super(itemsData, element)
+  }
+
+  createMenuItem(item) {
+    const { id, element, textContent } = item
+    const menuItem = document.createElement('li')
+    menuItem.classList.add('aside-menu-item')
+
+    menuItem.id = 'text-nav-' + id
+    menuItem.dataset.id = 'text-nav-' + id
+    element.dataset.id = 'text-nav-' + id
+
+    menuItem.textContent = textContent
+
+    menuItem.addEventListener('click', () => element.scrollIntoView({ block: "center", behavior: "smooth" }))
+
+    return {
+      item: menuItem,
+      targetElement: item.element,
+      id: item.id
+    }
   }
 }
 
@@ -100,4 +148,3 @@ document.addEventListener('DOMContentLoaded', () => {
   const main = new Main(data)
   main.init()
 })
-
