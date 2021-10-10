@@ -25,22 +25,24 @@ class Main {
       this.generateLeftMenu()
     }
 
-    window.addEventListener("scroll", throttleScroll, false);
+    window.addEventListener("scroll", (e) => this.throttleScroll.bind(this), false);
+  }
 
-    function throttleScroll(e) {
-      if (isScrolling == false) {
-        window.requestAnimationFrame(function () {
-          onScroll(e);
-          this.isScrolling = false;
-        });
-      }
-      isScrolling = true;
+  throttleScroll(e) {
+    console.log(e)
+    if (this.isScrolling == false) {
+      window.requestAnimationFrame(function () {
+        this.onScroll(e);
+        this.isScrolling = false;
+      });
     }
+    this.isScrolling = true;
+  }
 
-    function onScroll(e) {
-      if (this.isDefault && this.UI.leftMenu) {
-        console.log(this.UI.leftMenu.menuItems)
-      }
+  onScroll(e) {
+    console.log('111')
+    if (this.isDefault && this.UI.leftMenu) {
+      console.log(this.UI.leftMenu.menuItems)
     }
   }
 
