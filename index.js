@@ -25,13 +25,12 @@ class Main {
       this.generateLeftMenu()
     }
 
-    window.addEventListener("scroll", (e) => this.throttleScroll.bind(this), false);
+    window.addEventListener("scroll", this.throttleScroll.bind(this), false);
   }
 
   throttleScroll(e) {
-    console.log(e)
     if (this.isScrolling == false) {
-      window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(() => {
         this.onScroll(e);
         this.isScrolling = false;
       });
@@ -40,9 +39,27 @@ class Main {
   }
 
   onScroll(e) {
-    console.log('111')
+    this.updateLeftMenu()
+  }
+
+  updateLeftMenu() {
     if (this.isDefault && this.UI.leftMenu) {
-      console.log(this.UI.leftMenu.menuItems)
+      const windowPosition = {
+        top: window.pageYOffset,
+        bottom: window.pageYOffset + document.documentElement.clientHeight
+      };
+
+      this.UI.leftMenu.menuItems.forEach(menuItem => {
+        let activeItems = this.UI.leftMenu.menuItems.filter(item => item.active)
+        const targetPosition = window.pageYOffset + menuItem.targetElement.getBoundingClientRect().top
+
+        if (targetPosition < windowPosition.bottom - document.documentElement.clientHeight / 2) {
+          this.UI.leftMenu.toggleActive(true, menuItem)
+        }
+        else {
+          this.UI.leftMenu.toggleActive(false, menuItem)
+        }
+      });
     }
   }
 
@@ -141,7 +158,20 @@ class AsideMenu extends Menu {
     return {
       item: menuItem,
       targetElement: item.element,
-      id: item.id
+      id: item.id,
+      active: false
+    }
+  }
+
+  toggleActive(value, menuItem) {
+    if (menuItem.active != value) {
+      if (value) {
+        menuItem.item.classList.add('active')
+      }
+      else {
+        menuItem.item.classList.remove('active')
+      }
+      menuItem.active = value
     }
   }
 }
