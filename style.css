@@ -62,18 +62,28 @@ table {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 20px;
+}
+
+#team-moscow-content .row {
+  display: flex;
+  flex-direction: row;
+}
+#team-moscow-content .column {
+  display: flex;
+  flex-direction: column;
 }
 
 #team-moscow-content .header {
   background-color: #656765;
-  background-image: url(/img/homeBg.jpg);
+  background-image: url(/img/templateBg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 #team-moscow-content.default .header {
-  background-image: url(/img/templateBg.jpg);
+  background-image: url(/img/homeBg.jpg);
 }
 
 #team-moscow-content .header .menu {
@@ -125,9 +135,38 @@ table {
   letter-spacing: 0.3rem;
 }
 
+#team-moscow-content .bg-dark-img {
+  background-color: rgb(58, 58, 58);
+  background-image: url(/img/bg.jpg);
+  background-position: bottom;
+  background-size: 100%;
+  color: #fff;
+}
+
+#team-moscow-content .container .btn {
+  background: #B0B0B0;
+  padding: 23px 83px;
+  border-radius: 30px;
+  color: #fff;
+  align-self: center;
+}
+#team-moscow-content .container .btn:hover {
+  background: #929292;
+}
+
 #team-moscow-content .footer {
   background-color: #B0B0B0;
   padding-bottom: 20px;
+}
+
+#team-moscow-content .footer .footer-text {
+  padding-top: 17px;
+  padding-bottom: 21px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 36px;
+  letter-spacing: 0.04em;
 }
 
 #team-moscow-content .footer .nav {
