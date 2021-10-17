@@ -10,6 +10,8 @@ class Main {
     }
     this.dom = null
 
+    this.slider = null
+
     this.isDefault = false
     this.isScrolling = false
   }
@@ -26,6 +28,8 @@ class Main {
     }
 
     window.addEventListener("scroll", this.throttleScroll.bind(this), false);
+
+    this.slider = new Slider(this.data.slider, this.dom.querySelector('.slider'))
   }
 
   throttleScroll(e) {
@@ -43,23 +47,25 @@ class Main {
   }
 
   updateLeftMenu() {
-    if (this.isDefault && this.UI.leftMenu) {
-      const windowPosition = {
-        top: window.pageYOffset,
-        bottom: window.pageYOffset + document.documentElement.clientHeight
-      };
-
-      this.UI.leftMenu.menuItems.forEach(menuItem => {
-        let activeItems = this.UI.leftMenu.menuItems.filter(item => item.active)
-        const targetPosition = window.pageYOffset + menuItem.targetElement.getBoundingClientRect().top
-
-        if (targetPosition < windowPosition.bottom - document.documentElement.clientHeight / 2) {
-          this.UI.leftMenu.toggleActive(true, menuItem)
+    if (this.isDefault) {
+      if (this.UI.leftMenu) {
+        const windowPosition = {
+          top: window.pageYOffset,
+          bottom: window.pageYOffset + document.documentElement.clientHeight
         }
-        else {
-          this.UI.leftMenu.toggleActive(false, menuItem)
-        }
-      });
+
+        this.UI.leftMenu.menuItems.forEach(menuItem => {
+          let activeItems = this.UI.leftMenu.menuItems.filter(item => item.active)
+          const targetPosition = window.pageYOffset + menuItem.targetElement.getBoundingClientRect().top
+
+          if (targetPosition < windowPosition.bottom - document.documentElement.clientHeight / 2) {
+            this.UI.leftMenu.toggleActive(true, menuItem)
+          }
+          else {
+            this.UI.leftMenu.toggleActive(false, menuItem)
+          }
+        })
+      }
     }
   }
 
@@ -81,7 +87,6 @@ class Main {
 
     this.UI.leftMenu = new AsideMenu(menu, this.dom.querySelector('#nav-left .left-menu'))
   }
-
 
 }
 
@@ -172,6 +177,108 @@ class AsideMenu extends Menu {
         menuItem.item.classList.remove('active')
       }
       menuItem.active = value
+    }
+  }
+}
+
+class Slider {
+  constructor(itemsData, element) {
+    this.itemsData = itemsData
+    this.element = element
+    this.items = []
+    this.sliderContent = this.element.querySelector('.slider-content .row')
+    this.arrowLeft = this.element.querySelector('.arrow-left')
+    this.arrowRight = this.element.querySelector('.arrow-right')
+
+    this.createSlider()
+    this.arrowLeft.classList.add('disabled')
+    this.arrowLeft.addEventListener('click', this.onLeftArrowClick.bind(this))
+    this.arrowRight.addEventListener('click', this.onRightArrowClick.bind(this))
+  }
+
+  createSlider() {
+    let showing = 3
+    if (this.element.offsetWidth > 1100) {
+      showing = 4
+    } 
+    else if (this.element.offsetWidth < 500) {
+      showing = 1
+    }
+    else if (this.element.offsetWidth < 760) {
+      showing = 2
+    }
+    
+    const fragment = document.createDocumentFragment()
+
+    for (let i = 0; i < this.itemsData.length; i++) {
+      const card = document.createElement('div')
+      const title = document.createElement('h5')
+      const text = document.createElement('p')
+
+      title.textContent = this.itemsData[i].title
+      text.textContent = this.itemsData[i].text
+
+      card.classList = 'item column hide'
+      card.append(title, text)
+
+      fragment.appendChild(card)
+      this.items.push({
+        id: i,
+        element: card,
+        active: false
+      })
+
+      if (i < showing) {
+        this.show(this.items[i])
+      }
+    }
+
+    this.sliderContent.append(fragment)
+  }
+
+  onLeftArrowClick() {
+    if (!this.items[0].active) {
+      const statusArray = this.items.map(item => item.active)
+      const first = statusArray.indexOf(true)
+      const last = statusArray.lastIndexOf(true)
+      this.show(this.items[first - 1])
+      this.hide(this.items[last])
+
+      this.updateArrowButtons()
+    }
+  }
+
+  onRightArrowClick() {
+    if (!this.items[this.items.length - 1].active) {
+      const statusArray = this.items.map(item => item.active)
+      const first = statusArray.indexOf(true)
+      const last = statusArray.lastIndexOf(true)
+      this.show(this.items[last + 1])
+      this.hide(this.items[first])
+      
+      this.updateArrowButtons()
+    }
+  }
+
+  show(item) {
+    item.element.classList.remove('hide')
+    item.active = true
+  }
+  hide(item) {
+    item.element.classList.add('hide')
+    item.active = false
+  }
+
+  updateArrowButtons() {
+    if (this.items[0].active) {
+      this.arrowLeft.classList.add('disabled')
+    }
+    else if (this.items[this.items.length - 1].active) {
+      this.arrowRight.classList.add('disabled')
+    }
+    else {
+      this.arrowLeft.classList.remove('disabled')
+      this.arrowRight.classList.remove('disabled')
     }
   }
 }
