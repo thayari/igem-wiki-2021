@@ -25,11 +25,11 @@ class Main {
 
     if (this.isDefault) {
       this.generateLeftMenu()
+      window.addEventListener("scroll", this.throttleScroll.bind(this), false);
     }
-
-    window.addEventListener("scroll", this.throttleScroll.bind(this), false);
-
-    this.slider = new Slider(this.data.slider, this.dom.querySelector('.slider'))
+    else {
+      this.slider = new Slider(this.data.slider, this.dom.querySelector('.slider'))
+    }
   }
 
   throttleScroll(e) {
@@ -71,8 +71,8 @@ class Main {
 
   generateMainMenu() {
     const { menu } = this.data
-    this.UI.topMenu = new Menu(menu, this.dom.querySelector('#top-nav-menu'))
-    this.UI.bottomMenu = new Menu(menu, this.dom.querySelector('#bottom-nav-menu'))
+    this.UI.topMenu = new Menu(menu, this.dom.querySelector('#top-nav-menu'), 'top')
+    this.UI.bottomMenu = new Menu(menu, this.dom.querySelector('#bottom-nav-menu'), 'bottom')
   }
 
   generateLeftMenu() {
@@ -91,9 +91,10 @@ class Main {
 }
 
 class Menu {
-  constructor(itemsData, element) {
+  constructor(itemsData, element, position = null) {
     this.itemsData = itemsData
     this.element = element
+    this.position = position
     this.menuItems = []
 
     this.createMenu()
@@ -107,10 +108,11 @@ class Menu {
     menuItem.classList.add('nav-menu-item')
     dropdown.classList.add('nav-menu-dropdown')
 
-    menuItem.id = key
+    menuItem.id = this.position ? this.position + '-' + key : key
 
     link.href = item.href
     link.textContent = item.title
+    menuItem.append(link)
 
     if (item.content) {
       let html = ''
@@ -118,9 +120,8 @@ class Menu {
         html += `<li><a href="${element[1]}">${element[0]}</a></li>`
       });
       dropdown.innerHTML = html
+      menuItem.append(dropdown)
     }
-
-    menuItem.append(link, dropdown)
 
     return {
       item: menuItem,

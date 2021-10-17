@@ -607,3 +607,20 @@ table {
 #team-moscow-content .part5 .column:nth-child(1) {
   padding-right: 100px;
 }
+
+#team-moscow-content .footer #bottom-home {
+  display: none;
+}
+
+#team-moscow-content .footer .nav-menu-dropdown {
+  font-size: 12px;
+  line-height: 22px;
+}
+
+#team-moscow-content .footer .nav-menu-item {
+  margin-right: 20px;
+}
+
+#team-moscow-content .footer .nav-menu-item:last-child {
+  margin-right: 0;
+}

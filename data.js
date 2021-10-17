@@ -2,8 +2,7 @@ var data = {
   menu: {
     home: {
       title: 'Home Page',
-      href: '/',
-      content: null
+      href: '/'
     },
     project: {
       title: 'Project',
