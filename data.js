@@ -9,20 +9,16 @@ var data = {
       title: 'Project',
       href: '/',
       content: [
-        ['Contribution', '/template.html'],
         ['Description', '/'],
-        ['Design', '/'],
-        ['Proof of concept', '/'],
         ['Proposed implementation', '/'],
-        ['Results', '/'],
-        ['Safety', '/'],
+        ['Contribution', '/'],
       ]
     },
     dry: {
       title: 'Dry lab',
       href: '/',
       content: [
-        ['Biomarkers', '/'],
+        ['miRNAs analysis', '/'],
         ['Modeling', '/'],
         ['Software', '/']
       ]
@@ -31,11 +27,8 @@ var data = {
       title: 'Wet lab',
       href: '/',
       content: [
-        ['Engineering success', '/'],
-        ['Experiments', '/'],
         ['Lab journal', '/'],
-        ['Measurement', '/'],
-        ['Parts', '/']
+        ['Engineering Success', '/'],
       ]
     },
     human: {
@@ -43,10 +36,7 @@ var data = {
       href: '/',
       content: [
         ['Integrated Human Practices', '/'],
-        ['Science Com', '/'],
-        ['Handbook 1', '/'],
-        ['Handbook 2', '/'],
-        ['Events&Lectures', '/']
+        ['Education&Communication', '/'],
       ]
     },
     about: {
@@ -55,7 +45,6 @@ var data = {
       content: [
         ['Attributions', '/'],
         ['Collaborations', '/'],
-        ['Team', '/']
       ]
     }
   },
