@@ -9,41 +9,41 @@ var data = {
       title: 'Project',
       href: '/',
       content: [
-        ['Description', '/'],
-        ['Proposed implementation', '/'],
-        ['Contribution', '/'],
+        ['Description', 'https://2021.igem.org/Team:Moscow/Description'],
+        ['Proposed implementation', 'https://2021.igem.org/Team:Moscow/Implementation'],
+        ['Contribution', 'https://2021.igem.org/Team:Moscow/Contribution'],
       ]
     },
     dry: {
       title: 'Dry lab',
       href: '/',
       content: [
-        ['miRNAs analysis', '/'],
-        ['Modeling', '/'],
+        ['miRNAs analysis', 'https://2021.igem.org/Team:Moscow/miRNA_analysis'],
+        ['Modeling', 'https://2021.igem.org/Team:Moscow/Model'],
       ]
     },
     wet: {
       title: 'Wet lab',
       href: '/',
       content: [
-        ['Lab journal', '/'],
-        ['Engineering Success', '/'],
+        ['Lab journal', 'https://2021.igem.org/Team:Moscow/Lab_journal'],
+        ['Engineering Success', 'https://2021.igem.org/Team:Moscow/Engineering'],
       ]
     },
     human: {
       title: 'Human Practices',
       href: '/',
       content: [
-        ['Integrated Human Practices', '/'],
-        ['Education&Communication', '/'],
+        ['Integrated Human Practices', 'https://2021.igem.org/Team:Moscow/Human_Practices'],
+        ['Education&Communication', 'https://2021.igem.org/Team:Moscow/Communication'],
       ]
     },
     about: {
       title: 'About Us',
       href: '/',
       content: [
-        ['Attributions', '/'],
-        ['Collaborations', '/'],
+        ['Attributions', 'https://2021.igem.org/Team:Moscow/Attributions'],
+        ['Collaborations', 'https://2021.igem.org/Team:Moscow/Collaborations'],
       ]
     }
   },
