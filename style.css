@@ -76,6 +76,11 @@ table {
     max-width: 760px;
   }
 }
+@media (max-width: 768px) {
+  #team-moscow-content .container {
+    max-width: 90%;
+  }
+}
 
 #team-moscow-content .row {
   display: flex;
@@ -88,18 +93,24 @@ table {
 
 #team-moscow-content .header {
   background-color: #656765;
-  background-image: linear-gradient(rgb(231,215,170,0.1), rgba(231,215,170, 0.2)), url(/img/templateBg.jpg);
+  background-image: linear-gradient(rgb(231,215,170,0.1), rgba(231,215,170, 0.2)), url(https://2021.igem.org/File:T--Moscow--templateBg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 #team-moscow-content.default .header {
-  background-image: linear-gradient(rgb(231,215,170,0.1), rgba(231,215,170, 0.2)), url(/img/homeBg.jpg);
+  background-image: linear-gradient(rgb(231,215,170,0.1), rgba(231,215,170, 0.2)), url(https://2021.igem.org/File:T--Moscow--homeBg.jpg);
 }
 
 #team-moscow-content .header .menu {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  #team-moscow-content .header .nav .nav-menu {
+    flex-direction: column;
+  }
 }
 
 #team-moscow-content .header .nav .nav-menu {
@@ -148,7 +159,7 @@ table {
 }
 
 #team-moscow-content .bg-dark-img {
-  background-image: linear-gradient(rgba(0,0,0,0) 70%, rgba(255,255,255,1) 100%), url(/img/bg.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0) 70%, rgba(255,255,255,1) 100%), url(https://2021.igem.org/File:T--Moscow--bg.jpg);
   background-position: top;
   background-size: cover;
   color: #fff;
@@ -350,14 +361,14 @@ table {
 #team-moscow-content .icon.icon1 {
   width: 72px;
   height: 72px;
-  background-image: url(/img/icon1.png);
+  background-image: url(https://2021.igem.org/File:T--Moscow--icon1.png);
 }
 
 #team-moscow-content .icon.icon2 {
   margin-top: 30px;
   width: 74px;
   height: 74px;
-  background-image: url(/img/icon2.png);
+  background-image: url(https://2021.igem.org/File:T--Moscow--icon2.png);
 }
 
 #team-moscow-content .part1 .row2 {
@@ -394,15 +405,15 @@ table {
 }
 
 #team-moscow-content .part1 .row3 .column .icon.icon3 {
-  background-image: url(/img/icon3.png);
+  background-image: url(https://2021.igem.org/File:T--Moscow--icon3.png);
 }
 
 #team-moscow-content .part1 .row3 .column .icon.icon4 {
-  background-image: url(/img/icon4.png);
+  background-image: url(https://2021.igem.org/File:T--Moscow--icon4.png);
 }
 
 #team-moscow-content .part1 .row3 .column .icon.icon5 {
-  background-image: url(/img/icon5.png);
+  background-image: url(https://2021.igem.org/File:T--Moscow--icon5.png);
 }
 
 #team-moscow-content .part1 .row3,
@@ -426,7 +437,7 @@ table {
   right: 0;
   width: 303px;
   height: 635px;
-  background-image: url(/img/white-bg.png);
+  background-image: url(https://2021.igem.org/File:T--Moscow--white-bg.png);
 }
 
 #team-moscow-content .part1 .row4 {
@@ -455,7 +466,7 @@ table {
   left: 0;
   width: 263px;
   height: 512px;
-  background-image: url(/img/yellow-bgh.png);
+  background-image: url(https://2021.igem.org/File:T--Moscow--yellow-bgh.png);
 }
 
 #team-moscow-content .part2 {
@@ -524,7 +535,7 @@ table {
   background: #FFFFFF;
   box-shadow: 0px 2px 7px rgba(133, 133, 133, 0.2);
   border-radius: 4px;
-  background-image: url(/img/arrow.svg);
+  background-image: url(https://2021.igem.org/File:T--Moscow--arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -542,19 +553,19 @@ table {
 #team-moscow-content .icon6 {
   width: 91px;
   height: 86px;
-  background-image: url(/img/icon6.png);
+  background-image: url(https://2021.igem.org/File:T--Moscow--icon6.png);
 }
 
 #team-moscow-content .icon7 {
   width: 109px;
   height: 86px;
-  background-image: url(/img/icon7.png);
+  background-image: url(https://2021.igem.org/File:T--Moscow--icon7.png);
 }
 
 #team-moscow-content .icon8 {
   width: 64px;
   height: 76px;
-  background-image: url(/img/icon8.png);
+  background-image: url(https://2021.igem.org/File:T--Moscow--icon8.png);
 }
 
 #team-moscow-content .part4 .icon {
