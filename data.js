@@ -8,53 +8,41 @@ var data = {
       title: 'Project',
       href: '/',
       content: [
-        ['Contribution', '/template.html'],
-        ['Description', '/'],
-        ['Design', '/'],
-        ['Proof of concept', '/'],
-        ['Proposed implementation', '/'],
-        ['Results', '/'],
-        ['Safety', '/'],
+        ['Description', 'https://2021.igem.org/Team:Moscow/Description'],
+        ['Proposed implementation', 'https://2021.igem.org/Team:Moscow/Implementation'],
+        ['Contribution', 'https://2021.igem.org/Team:Moscow/Contribution'],
       ]
     },
     dry: {
       title: 'Dry lab',
       href: '/',
       content: [
-        ['Biomarkers', '/'],
-        ['Modeling', '/'],
-        ['Software', '/']
+        ['miRNAs analysis', 'https://2021.igem.org/Team:Moscow/miRNA_analysis'],
+        ['Modeling', 'https://2021.igem.org/Team:Moscow/Model'],
       ]
     },
     wet: {
       title: 'Wet lab',
       href: '/',
       content: [
-        ['Engineering success', '/'],
-        ['Experiments', '/'],
-        ['Lab journal', '/'],
-        ['Measurement', '/'],
-        ['Parts', '/']
+        ['Lab journal', 'https://2021.igem.org/Team:Moscow/Lab_journal'],
+        ['Engineering Success', 'https://2021.igem.org/Team:Moscow/Engineering'],
       ]
     },
     human: {
       title: 'Human Practices',
       href: '/',
       content: [
-        ['Integrated Human Practices', '/'],
-        ['Science Com', '/'],
-        ['Handbook 1', '/'],
-        ['Handbook 2', '/'],
-        ['Events&Lectures', '/']
+        ['Integrated Human Practices', 'https://2021.igem.org/Team:Moscow/Human_Practices'],
+        ['Education&Communication', 'https://2021.igem.org/Team:Moscow/Communication'],
       ]
     },
     about: {
       title: 'About Us',
       href: '/',
       content: [
-        ['Attributions', '/'],
-        ['Collaborations', '/'],
-        ['Team', '/']
+        ['Attributions', 'https://2021.igem.org/Team:Moscow/Attributions'],
+        ['Collaborations', 'https://2021.igem.org/Team:Moscow/Collaborations'],
       ]
     }
   },
