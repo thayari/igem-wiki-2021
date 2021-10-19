@@ -20,7 +20,6 @@ var data = {
       content: [
         ['miRNAs analysis', '/'],
         ['Modeling', '/'],
-        ['Software', '/']
       ]
     },
     wet: {
