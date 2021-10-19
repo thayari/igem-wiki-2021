@@ -1,68 +1,80 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+#bodyContent .container a[href ^="https://"], .link-https {
+  padding: 0;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
 body {
-	line-height: 1;
+font-size: 1rem;
 }
+
+#HQ_page {
+margin-bottom: -2em;
+}
+
+#globalWrapper #content {
+width: 100%;
+padding: 0;
+margin: 0;
+}
+
+#content #top_title {
+display: none;
+}
+
+#globalWrapper #top_menu_under {
+display: none;
+}
+
+#HQ_page p, #HQ_page ul, #HQ_page li {
+margin: 0;
+padding: 0;
+}
+
+#HQ_page #bodyContent p {
+font-family: inherit;
+font-size: inherit;
+text-align: inherit;
+}
+
+#HQ_page #bodyContent p {
+  margin-bottom: 0.8em;
+}
+
 ol, ul {
-	list-style: none;
+list-style: none;
 }
 blockquote, q {
-	quotes: none;
+quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+content: '';
+content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+border-collapse: collapse;
+border-spacing: 0;
 }
 
 /*iGEM Team Moscow Styles*/
 
-#team-moscow-content {
-  font-family: 'Open Sans', sans-serif;
+#HQ_page #team-moscow-content h1, h2, h3, h4, h5 {
+font-family: 'Open Sans', sans-serif;
+}
+#HQ_page #team-moscow-content {
+font-family: 'Open Sans', sans-serif;
 }
 
-#team-moscow-content a {
-  color: inherit;
-  text-decoration: none;
+#HQ_page #team-moscow-content a {
+color: inherit;
+text-decoration: none;
 }
 
 #team-moscow-content .container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 20px;
+max-width: 1200px;
+margin-left: auto;
+margin-right: auto;
+padding: 0 20px;
 }
 
 @media (max-width: 1240px) {
@@ -234,7 +246,7 @@ table {
   margin-bottom: 15px;
   color: #898989;
   font-size: 30px;
-  line-height: 16px;
+  line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   text-shadow: #fff 1px 0, #fff .540302px .841471px, #fff -.416147px .909297px, #fff -.989992px .14112px, #fff -.653644px -.756802px, #fff .283662px -.958924px, #fff .96017px -.279415px;
@@ -257,6 +269,7 @@ table {
   line-height: 16px;
   letter-spacing: 1.25px;
   color: #9e9e9e;
+  display: flex;
   cursor: pointer;
 }
 
@@ -274,6 +287,7 @@ table {
   margin-right: 20px;
   margin-bottom: -2px;
   background-color: #9e9e9e;
+  flex-shrink: 0;
 }
 
 #team-moscow-content.default #main-container > .wrapper-columns .left-menu li.active::before {
@@ -634,4 +648,14 @@ table {
 
 #team-moscow-content .footer .nav-menu-item:last-child {
   margin-right: 0;
+}
+
+#team-moscow-content #main-content ul,
+#team-moscow-content #main-content ol {
+  list-style: auto;
+}
+
+#team-moscow-content .left-menu:hover {
+  color: inherit;
+  background-color: inherit;
 }
