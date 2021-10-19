@@ -214,7 +214,7 @@ class Slider {
     for (let i = 0; i < this.itemsData.length; i++) {
       const card = document.createElement('div')
       const title = document.createElement('h5')
-      const text = document.createElement('p')
+      const text = document.createElement('div')
 
       title.textContent = this.itemsData[i].title
       text.textContent = this.itemsData[i].text

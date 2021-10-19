@@ -25,19 +25,11 @@ display: none;
 display: none;
 }
 
-#HQ_page p, #HQ_page ul, #HQ_page li {
-margin: 0;
-padding: 0;
-}
-
-#HQ_page #bodyContent p {
-font-family: inherit;
-font-size: inherit;
-text-align: inherit;
-}
-
-#HQ_page #bodyContent p {
+#HQ_page p.text {
   margin-bottom: 0.8em;
+  font-family: inherit;
+    font-size: inherit;
+    text-align: inherit;
 }
 
 ol, ul {
@@ -60,14 +52,30 @@ border-spacing: 0;
 
 #HQ_page #team-moscow-content h1, h2, h3, h4, h5 {
 font-family: 'Open Sans', sans-serif;
+color: inherit;
+overflow: visible;
 }
 #HQ_page #team-moscow-content {
 font-family: 'Open Sans', sans-serif;
 }
-
 #HQ_page #team-moscow-content a {
-color: inherit;
-text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+#team-moscow-content h1, h2, h3, h4, h5 {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+padding: 0;
+}
+
+#team-moscow-content {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#team-moscow-content a {
+  color: inherit;
+  text-decoration: none;
 }
 
 #team-moscow-content .container {
@@ -77,22 +85,6 @@ margin-right: auto;
 padding: 0 20px;
 }
 
-@media (max-width: 1240px) {
-  #team-moscow-content .container {
-    max-width: 960px;
-  }
-}
-
-@media (max-width: 960px) {
-  #team-moscow-content .container {
-    max-width: 760px;
-  }
-}
-@media (max-width: 768px) {
-  #team-moscow-content .container {
-    max-width: 90%;
-  }
-}
 
 #team-moscow-content .row {
   display: flex;
@@ -101,39 +93,37 @@ padding: 0 20px;
 #team-moscow-content .column {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 #team-moscow-content .header {
   background-color: #656765;
-  background-image: linear-gradient(rgb(231,215,170,0.1), rgba(231,215,170, 0.2)), url(https://2021.igem.org/File:T--Moscow--templateBg.jpg);
+  background-image: linear-gradient(rgb(231,215,170,0.1), rgba(231,215,170, 0.2)), url(https://2021.igem.org/wiki/images/b/b3/T--Moscow--templateBg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 #team-moscow-content.default .header {
-  background-image: linear-gradient(rgb(231,215,170,0.1), rgba(231,215,170, 0.2)), url(https://2021.igem.org/File:T--Moscow--homeBg.jpg);
+  background-image: linear-gradient(rgb(231,215,170,0.1), rgba(231,215,170, 0.2)), url(https://2021.igem.org/wiki/images/e/e4/T--Moscow--homeBg.jpg);
 }
 
 #team-moscow-content .header .menu {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-@media (max-width: 768px) {
-  #team-moscow-content .header .nav .nav-menu {
-    flex-direction: column;
-  }
-}
-
 #team-moscow-content .header .nav .nav-menu {
   display: flex;
   flex-direction: row;
+  white-space: nowrap;
+  margin: 0;
   justify-content: space-between;
   color: #fff;
   padding: 20px 0;
   font-size: 18px;
   text-transform: uppercase;
 }
+
 
 #team-moscow-content .header .nav .nav-menu .nav-menu-item {
   margin: 0 10px;
@@ -146,6 +136,7 @@ padding: 0 20px;
   padding: 10px;
   background-color: #656765;
   text-transform: none;
+  margin: 0;
 }
 
 #team-moscow-content .header .nav .nav-menu .nav-menu-item > ul > li {
@@ -156,11 +147,25 @@ padding: 0 20px;
   display: flex;
 }
 
+@media (max-width: 768px) {
+  #team-moscow-content .header .nav .nav-menu {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 680px) {
+  #team-moscow-content .header .nav .nav-menu {
+    font-size: 18px;
+    flex-wrap: wrap;
+  }
+}
+
 #team-moscow-content .header .title {
   padding-top: 90px;
   padding-bottom: 144px;
 }
 
+#HQ_page #team-moscow-content .header h1.heading1,
 #team-moscow-content .header h1.heading1 {
   font-size: 70px;
   font-weight: 600;
@@ -171,7 +176,7 @@ padding: 0 20px;
 }
 
 #team-moscow-content .bg-dark-img {
-  background-image: linear-gradient(rgba(0,0,0,0) 70%, rgba(255,255,255,1) 100%), url(https://2021.igem.org/File:T--Moscow--bg.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0) 70%, rgba(255,255,255,1) 100%), url(https://2021.igem.org/wiki/images/b/be/T--Moscow--bg.jpg);
   background-position: top;
   background-size: cover;
   color: #fff;
@@ -215,6 +220,7 @@ padding: 0 20px;
   padding: 20px;
   font-size: 18px;
   line-height: 1.4;
+  margin: 0;
 }
 
 #team-moscow-content .footer .nav .nav-menu .nav-menu-item > a {
@@ -375,14 +381,14 @@ padding: 0 20px;
 #team-moscow-content .icon.icon1 {
   width: 72px;
   height: 72px;
-  background-image: url(https://2021.igem.org/File:T--Moscow--icon1.png);
+  background-image: url(https://2021.igem.org/wiki/images/1/13/T--Moscow--icon1.png);
 }
 
 #team-moscow-content .icon.icon2 {
   margin-top: 30px;
   width: 74px;
   height: 74px;
-  background-image: url(https://2021.igem.org/File:T--Moscow--icon2.png);
+  background-image: url(https://2021.igem.org/wiki/images/2/26/T--Moscow--icon2.png);
 }
 
 #team-moscow-content .part1 .row2 {
@@ -407,6 +413,7 @@ padding: 0 20px;
   font-size: 36px;
   line-height: 49px;
   text-align: center;
+  height: 105px;
 }
 
 #team-moscow-content .part1 .row3 .column .icon {
@@ -416,19 +423,22 @@ padding: 0 20px;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 8px;
 }
 
 #team-moscow-content .part1 .row3 .column .icon.icon3 {
-  background-image: url(https://2021.igem.org/File:T--Moscow--icon3.png);
+  background-image: url(https://2021.igem.org/wiki/images/d/d7/T--Moscow--icon3.png);
 }
 
 #team-moscow-content .part1 .row3 .column .icon.icon4 {
-  background-image: url(https://2021.igem.org/File:T--Moscow--icon4.png);
+  background-image: url(https://2021.igem.org/wiki/images/4/43/T--Moscow--icon4.png);
 }
 
 #team-moscow-content .part1 .row3 .column .icon.icon5 {
-  background-image: url(https://2021.igem.org/File:T--Moscow--icon5.png);
+  background-image: url(https://2021.igem.org/wiki/images/0/08/T--Moscow--icon5.png);
 }
+
+
 
 #team-moscow-content .part1 .row3,
 #team-moscow-content .part1 .row4 {
@@ -451,7 +461,7 @@ padding: 0 20px;
   right: 0;
   width: 303px;
   height: 635px;
-  background-image: url(https://2021.igem.org/File:T--Moscow--white-bg.png);
+  background-image: url(https://2021.igem.org/wiki/images/2/2a/T--Moscow--white-bg.png);
 }
 
 #team-moscow-content .part1 .row4 {
@@ -480,7 +490,7 @@ padding: 0 20px;
   left: 0;
   width: 263px;
   height: 512px;
-  background-image: url(https://2021.igem.org/File:T--Moscow--yellow-bgh.png);
+  background-image: url(https://2021.igem.org/wiki/images/6/69/T--Moscow--yellow-bgh.png);
 }
 
 #team-moscow-content .part2 {
@@ -549,7 +559,7 @@ padding: 0 20px;
   background: #FFFFFF;
   box-shadow: 0px 2px 7px rgba(133, 133, 133, 0.2);
   border-radius: 4px;
-  background-image: url(https://2021.igem.org/File:T--Moscow--arrow.svg);
+  background-image: url(https://2021.igem.org/wiki/images/5/50/T--Moscow--arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -567,19 +577,19 @@ padding: 0 20px;
 #team-moscow-content .icon6 {
   width: 91px;
   height: 86px;
-  background-image: url(https://2021.igem.org/File:T--Moscow--icon6.png);
+  background-image: url(https://2021.igem.org/wiki/images/2/27/T--Moscow--icon6.png);
 }
 
 #team-moscow-content .icon7 {
   width: 109px;
   height: 86px;
-  background-image: url(https://2021.igem.org/File:T--Moscow--icon7.png);
+  background-image: url(https://2021.igem.org/wiki/images/6/67/T--Moscow--icon7.png);
 }
 
 #team-moscow-content .icon8 {
   width: 64px;
   height: 76px;
-  background-image: url(https://2021.igem.org/File:T--Moscow--icon8.png);
+  background-image: url(https://2021.igem.org/wiki/images/1/19/T--Moscow--icon8.png);
 }
 
 #team-moscow-content .part4 .icon {
@@ -640,6 +650,7 @@ padding: 0 20px;
 #team-moscow-content .footer .nav-menu-dropdown {
   font-size: 12px;
   line-height: 22px;
+  margin: 0;
 }
 
 #team-moscow-content .footer .nav-menu-item {
@@ -650,7 +661,9 @@ padding: 0 20px;
   margin-right: 0;
 }
 
-#team-moscow-content #main-content ul,
+#team-moscow-content #main-content ul {
+  list-style-type: disc;
+}
 #team-moscow-content #main-content ol {
   list-style: auto;
 }
@@ -658,4 +671,123 @@ padding: 0 20px;
 #team-moscow-content .left-menu:hover {
   color: inherit;
   background-color: inherit;
+}
+
+@media (max-width: 1240px) {
+  #team-moscow-content .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 960px) {
+  #team-moscow-content .container {
+    max-width: 760px;
+  }
+
+  #team-moscow-content .footer .nav .nav-menu {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 980px) {
+  #team-moscow-content .part1 .row1 {
+    flex-direction: column;
+  }
+
+  #team-moscow-content .part1 .row1 .column {
+    width: 100%;
+  }
+
+  #team-moscow-content .part1 .row1 .column:nth-child(1) {
+    border-right: 1px solid #fff;
+  }
+  #team-moscow-content .part1 .row1 .column:nth-child(2) {
+    margin-top: 0;
+  }
+
+  #team-moscow-content .part1 .row3 {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  #team-moscow-content .part1 .row3 .column {
+    width: 45%;
+    margin: 10px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 760px) {
+  #team-moscow-content .part1 .heading3, 
+  #team-moscow-content .part2 .heading2, 
+  #team-moscow-content .part4 .heading2 {
+    font-size: 8vw;
+    line-height: 1.1;
+  }
+
+  #team-moscow-content .container {
+    max-width: 90%;
+  }
+
+
+
+  #team-moscow-content .part1 .row4 .column {
+    width: 100%;
+    color: #000;
+  }
+
+  #team-moscow-content .part1 .row4::before {
+    background: none;
+  }
+
+  #team-moscow-content .part1 .row5 .column {
+    width: 100%;
+  }
+
+  #team-moscow-content .part1 .row5::before {
+    background: none;
+  }
+
+  #team-moscow-content .slider .item {
+    width: 48%;
+  }
+
+  #team-moscow-content .part1 .row3 .column {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 600px) {
+  #team-moscow-content .part1 .row1 .column {
+    padding: 38px 18px;
+  }
+
+
+  #team-moscow-content .heading2.common-symptoms {
+    font-size: 45px;
+    line-height: 54px;
+  }
+
+  #team-moscow-content .part4 .project {
+    width: 100%;
+  }
+
+  #team-moscow-content .part5 .row {
+    flex-direction: column;
+  }
+
+  #team-moscow-content .part5 .column,
+  #team-moscow-content .part5 .column:nth-child(1) {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  #team-moscow-content .slider .item {
+    width: 100%;
+  }
 }
