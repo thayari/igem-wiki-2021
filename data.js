@@ -19,6 +19,7 @@ var data = {
       content: [
         ['miRNAs analysis', 'https://2021.igem.org/Team:Moscow/miRNA_analysis'],
         ['Modeling', 'https://2021.igem.org/Team:Moscow/Model'],
+        ['Software', 'https://2021.igem.org/Team:Moscow/Software'],
       ]
     },
     wet: {
@@ -27,6 +28,7 @@ var data = {
       content: [
         ['Lab journal', 'https://2021.igem.org/Team:Moscow/Lab_journal'],
         ['Engineering Success', 'https://2021.igem.org/Team:Moscow/Engineering'],
+        ['Hardware', 'https://2021.igem.org/Team:Moscow/Hardware'],
       ]
     },
     human: {
@@ -43,6 +45,7 @@ var data = {
       content: [
         ['Attributions', 'https://2021.igem.org/Team:Moscow/Attributions'],
         ['Collaborations', 'https://2021.igem.org/Team:Moscow/Collaborations'],
+        ['Team', 'https://2021.igem.org/Team:Moscow/Team'],
       ]
     }
   },
