@@ -2,11 +2,11 @@ var data = {
   menu: {
     home: {
       title: 'Home Page',
-      href: '/'
+      href: 'https://2021.igem.org/Team:Moscow'
     },
     project: {
       title: 'Project',
-      href: '/',
+      href: 'https://2021.igem.org/Team:Moscow/Description',
       content: [
         ['Description', 'https://2021.igem.org/Team:Moscow/Description'],
         ['Proposed implementation', 'https://2021.igem.org/Team:Moscow/Implementation'],
@@ -15,7 +15,7 @@ var data = {
     },
     dry: {
       title: 'Dry lab',
-      href: '/',
+      href: 'https://2021.igem.org/Team:Moscow/miRNA_analysis',
       content: [
         ['miRNAs analysis', 'https://2021.igem.org/Team:Moscow/miRNA_analysis'],
         ['Modeling', 'https://2021.igem.org/Team:Moscow/Model'],
@@ -23,7 +23,7 @@ var data = {
     },
     wet: {
       title: 'Wet lab',
-      href: '/',
+      href: 'https://2021.igem.org/Team:Moscow/Lab_journal',
       content: [
         ['Lab journal', 'https://2021.igem.org/Team:Moscow/Lab_journal'],
         ['Engineering Success', 'https://2021.igem.org/Team:Moscow/Engineering'],
@@ -31,7 +31,7 @@ var data = {
     },
     human: {
       title: 'Human Practices',
-      href: '/',
+      href: 'https://2021.igem.org/Team:Moscow/Human_Practices',
       content: [
         ['Integrated Human Practices', 'https://2021.igem.org/Team:Moscow/Human_Practices'],
         ['Education&Communication', 'https://2021.igem.org/Team:Moscow/Communication'],
@@ -39,7 +39,7 @@ var data = {
     },
     about: {
       title: 'About Us',
-      href: '/',
+      href: 'https://2021.igem.org/Team:Moscow/Attributions',
       content: [
         ['Attributions', 'https://2021.igem.org/Team:Moscow/Attributions'],
         ['Collaborations', 'https://2021.igem.org/Team:Moscow/Collaborations'],
