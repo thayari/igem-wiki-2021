@@ -260,6 +260,7 @@ padding: 0 20px;
 
 #team-moscow-content.default #main-container > .wrapper-columns .aside {
   margin-right: 30px;
+  max-width: 27%;
 }
 
 
