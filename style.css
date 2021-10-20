@@ -296,6 +296,7 @@ tfoot tr td {
 #team-moscow-content.default #main-container > .wrapper-columns .left-menu {
   position: sticky;
   top: 40px;
+  margin-left: 0;
 }
 
 #team-moscow-content.default #main-container > .wrapper-columns .left-menu li {
