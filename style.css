@@ -64,6 +64,9 @@ font-family: 'Open Sans', sans-serif;
   text-decoration: none;
 }
 
+#HQ_page #team-moscow-content th {
+}
+
 #team-moscow-content h1, h2, h3, h4, h5 {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
