@@ -49,35 +49,6 @@ border-spacing: 0;
 }
 
 /*iGEM Team Moscow Styles*/
-table {
-	border-collapse: collapse;
-	text-align: left;
-	font-size: 90%;
-}
-table caption {
-	font-family:'Arial', sans-serif;
-	line-height:1.5;
-	font-size: 95%;
-	text-align: left;
-	margin-bottom: 10px;
-}
-th {
-	border-bottom: 2px solid #FFD402;
-	padding: 10px 8px;
-}
-td {
-	border-bottom: 1px solid #FFD402;
-	border-top: 1px solid #FFD402;
-	padding: 9px 8px;
-}
-tfoot tr td {
-	border-top:2px solid #FFD402;
-	padding: 10px 8px;
-}
-
-.col1 {
-	font-weight: bold;
-}
 
 #HQ_page #team-moscow-content h1, h2, h3, h4, h5 {
 font-family: 'Open Sans', sans-serif;
@@ -741,6 +712,36 @@ padding: 0 20px;
 
 #team-moscow-content .member-name {
   font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	text-align: left;
+	font-size: 90%;
+}
+table caption {
+	font-family:'Arial', sans-serif;
+	line-height:1.5;
+	font-size: 95%;
+	text-align: left;
+	margin-bottom: 10px;
+}
+th {
+	border-bottom: 2px solid #FFD402;
+	padding: 10px 8px;
+}
+td {
+	border-bottom: 1px solid #FFD402;
+	border-top: 1px solid #FFD402;
+	padding: 9px 8px;
+}
+tfoot tr td {
+	border-top:2px solid #FFD402;
+	padding: 10px 8px;
+}
+
+.col1 {
+	font-weight: bold;
 }
 
 @media (max-width: 1240px) {
