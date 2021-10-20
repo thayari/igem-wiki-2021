@@ -49,15 +49,15 @@ var data = {
   slider: [
     {
       title: '01',
-      text: 'The patient’s venous blood is taken for testing'
+      text: 'We collect a sample of the patient’s venous blood'
     },
     {
       title: '02',
-      text: 'The plasma fraction and extract specific miRNAs (a class of molecules, that we chose as biomarkers that can indicate a depressive disorder) are extracted'
+      text: 'We separate plasma from the sample and extract specific miRNAs (a class of molecules that we use as biomarkers for a depressive disorder)'
     },
     {
       title: '03',
-      text: 'Then microRNAs will be seeded onto a special dumbbell sample, which helps to start amplification'
+      text: 'Then microRNAs will be seeded onto a special dumbbell sample which helps to start amplification'
     },
     {
       title: '04',
