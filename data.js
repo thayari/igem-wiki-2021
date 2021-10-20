@@ -67,5 +67,55 @@ var data = {
       title: '05',
       text: 'The two halves of the fluorescent protein join together and begin to glow. Based on the brightness of the glow, our test system will determine the concentration of the miRNA'
     }
+  ],
+  team: [
+    {
+      img: '/',
+      name: 'Kirill Reshetnikov',
+      education: 'MSU',
+      about: 'Team lead'
+    },
+    {
+      img: '/',
+      name: 'Kirill Reshetnikov',
+      education: 'MSU',
+      about: 'Team lead'
+    },
+    {
+      img: '/',
+      name: 'Kirill Reshetnikov',
+      education: 'MSU',
+      about: 'Team lead'
+    },
+    {
+      img: '/',
+      name: 'Kirill Reshetnikov',
+      education: 'MSU',
+      about: 'Team lead'
+    },
+    {
+      img: '/',
+      name: 'Kirill Reshetnikov',
+      education: 'MSU',
+      about: 'Team lead'
+    },
+    {
+      img: '/',
+      name: 'Kirill Reshetnikov',
+      education: 'MSU',
+      about: 'Team lead'
+    },
+    {
+      img: '/',
+      name: 'Kirill Reshetnikov',
+      education: 'MSU',
+      about: 'Team lead'
+    },
+    {
+      img: '/',
+      name: 'Kirill Reshetnikov',
+      education: 'MSU',
+      about: 'Team lead'
+    },
   ]
 }

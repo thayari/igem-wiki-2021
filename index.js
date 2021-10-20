@@ -30,6 +30,10 @@ class Main {
     else {
       this.slider = new Slider(this.data.slider, this.dom.querySelector('.slider'))
     }
+
+    if (this.dom.querySelector('.members')) {
+      this.generateMembersList()
+    }
   }
 
   throttleScroll(e) {
@@ -86,6 +90,40 @@ class Main {
     })
 
     this.UI.leftMenu = new AsideMenu(menu, this.dom.querySelector('#nav-left .left-menu'))
+  }
+  
+  generateMembersList() {
+    const { team } = this.data
+
+    console.log(team)
+
+    const fragment = document.createDocumentFragment()
+
+    team.forEach(element => {
+      const memberItem = document.createElement('div')
+      const memberImage = document.createElement('div')
+      const memberText = document.createElement('div')
+      const memberName = document.createElement('div')
+      const memberEducation = document.createElement('div')
+      const memberAbout = document.createElement('div')
+      memberItem.append(memberImage, memberText)
+      memberText.append(memberName, memberEducation, memberAbout)
+      memberItem.classList.add('member-item')
+      memberImage.classList.add('member-image')
+      memberText.classList.add('member-text')
+      memberName.classList.add('member-name')
+      memberEducation.classList.add('member-education')
+      memberAbout.classList.add('member-about')
+
+      memberImage.style.backgroundImage = `url(${element.img})`
+      memberName.textContent = element.name
+      memberEducation.textContent = element.education
+      memberAbout.textContent = element.about
+    
+      fragment.appendChild(memberItem)
+    })
+
+    this.dom.querySelector('.members').appendChild(fragment)
   }
 
 }
