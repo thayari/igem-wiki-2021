@@ -107,6 +107,14 @@ font-family: 'Open Sans', sans-serif;
 padding: 0;
 }
 
+#team-moscow-content #sponsors {
+  margin-bottom: 30px;
+}
+
+#team-moscow-content #sponsors img {
+  width: 100%;
+}
+
 #team-moscow-content {
   font-family: 'Open Sans', sans-serif;
 }
