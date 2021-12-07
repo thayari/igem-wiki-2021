@@ -759,6 +759,7 @@ line-height: 1;
 }
 
 #team-moscow-content .member-item {
+	width: 21%;
   margin: 2%;
 }
 
@@ -776,6 +777,8 @@ line-height: 1;
   border-radius: 50%;
   width: 190px;
   height: 190px;
+	margin: auto;
+	background-size: contain;
   background-color: #fff;
 }
 
@@ -826,6 +829,10 @@ line-height: 1;
     margin: 10px;
     padding: 15px;
   }
+
+	#team-moscow-content .member-item {
+		width: 29%;
+	}
 }
 
 @media (max-width: 760px) {
@@ -840,7 +847,9 @@ line-height: 1;
     max-width: 90%;
   }
 
-
+	#team-moscow-content .member-item {
+		width: 43%;
+	}
 
   #team-moscow-content .part1 .row4 .column {
     width: 100%;
@@ -894,10 +903,18 @@ line-height: 1;
     width: 100%;
     margin-bottom: 40px;
   }
+
+	#team-moscow-content .member-item {
+		width: 70%;
+	}
 }
 
 @media (max-width: 500px) {
   #team-moscow-content .slider .item {
     width: 100%;
   }
+
+	#team-moscow-content .member-item {
+		width: 100%;
+	}
 }

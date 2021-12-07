@@ -95,8 +95,6 @@ class Main {
   generateMembersList() {
     const { team } = this.data
 
-    console.log(team)
-
     const fragment = document.createDocumentFragment()
 
     team.forEach(element => {
