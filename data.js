@@ -120,5 +120,65 @@ var data = {
       education: 'MSU',
       about: 'Team lead'
     },
-  ]
+  ],
+	sponsors: [
+		{
+			img: '/',
+			href: 'https://www.bio.msu.ru/'
+		},
+		{
+			img: '/',
+			href: 'https://biocad.ru/'
+		},
+		{
+			img: '/',
+			href: 'https://www.helicon.ru/'
+		},
+		{
+			img: '/',
+			href: 'https://hytest.ru/home'
+		},
+		{
+			img: '/',
+			href: 'https://www.skygen.com/'
+		},
+		{
+			img: '/',
+			href: 'https://www.snapgene.com/'
+		},
+		{
+			img: '/',
+			href: 'https://www.qiagen.com/'
+		},
+		{
+			img: '/',
+			href: 'https://ru.lumiprobe.com/'
+		},
+		{
+			img: '/',
+			href: 'https://www.rudn.ru/'
+		}	
+	],
+	partners: [
+		{
+			img: '/',
+			href: 'https://geek-picnic.me/'
+		},
+		{
+			img: '/',
+			href: 'https://www.mfliga.pro/'
+		},
+		{
+			img: '/',
+			href: 'https://ipbz.ru/about-piligrim/'
+		},
+		{
+			img: '/',
+			href: 'https://www.letnyayashkola.org/'
+		},
+		{
+			img: '/',
+			href: 'https://www.sechenov.ru/'
+		}
+	]
 }

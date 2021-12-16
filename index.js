@@ -34,6 +34,10 @@ class Main {
     if (this.dom.querySelector('.members')) {
       this.generateMembersList()
     }
+
+		if (this.dom.querySelector('.sponsorsWrapper')) {
+			this.generateSponsors()
+		}
   }
 
   throttleScroll(e) {
@@ -123,6 +127,29 @@ class Main {
 
     this.dom.querySelector('.members').appendChild(fragment)
   }
+
+	generateSponsors() {
+		const { sponsors, partners } = this.data
+
+		const sponsorsWrapper = document.querySelector('.sponsorsWrapper')
+
+		let fragment = document.createDocumentFragment()
+		sponsors.forEach(element => {
+			const item = document.createElement('div')
+			item.setAttribute('href', element.href)
+			item.style.backgroundImage = `url(${element.img})`
+			fragment.appendChild(item)
+		})
+		sponsorsWrapper.querySelector('.sponsors').appendChild(fragment)
+		fragment = document.createDocumentFragment()
+		partners.forEach(element => {
+			const item = document.createElement('div')
+			item.setAttribute('href', element.href)
+			item.style.backgroundImage = `url(${element.img})`
+			fragment.appendChild(item)
+		})
+		sponsorsWrapper.querySelector('.partners').appendChild(fragment)
+	}
 
 }
 

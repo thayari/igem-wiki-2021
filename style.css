@@ -71,7 +71,6 @@ font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
   background-color: #898989;
   color: #fff;
-  border: 
 }
 
 #HQ_page #team-moscow-content th {
@@ -830,6 +829,24 @@ line-height: 1;
 
 #team-moscow-content .member-name {
   font-weight: bold;
+}
+
+#team-moscow-content .sponsorsWrapper .sponsors,
+#team-moscow-content .sponsorsWrapper .partners {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#team-moscow-content .sponsorsWrapper .sponsors > *,
+#team-moscow-content .sponsorsWrapper .partners > * {
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-position: center;
+	flex-shrink: 0;
+	margin: 10px;
+	cursor: pointer;
 }
 
 @media (max-width: 1240px) {
