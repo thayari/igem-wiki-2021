@@ -1,5 +1,3 @@
-
-
 #bodyContent .container a[href ^="https://"], .link-https {
   padding: 0;
 }
@@ -64,10 +62,57 @@ font-family: 'Open Sans', sans-serif;
   text-decoration: none;
 }
 
+#HQ_page #team-moscow-content table {
+  border-collapse: collapse;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: #898989;
+  color: #fff;
+  border: 
+}
+
+#HQ_page #team-moscow-content th {
+  box-sizing: border-box;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: #898989;
+  color: #fff;
+  border-bottom: 3px solid #FFD402;
+  border-left: #898989;
+  border-right: #898989;
+}
+
+#HQ_page #team-moscow-content td {
+  border-bottom: 2px solid #FFD402;
+  border-top: 2px solid #FFD402;
+  padding: 10px 8px;
+  border-left: #898989;
+  border-right: #898989;
+}
+
+#HQ_page #team-moscow-content tfoot tr td {
+  border-top: 2px solid #FFD402;
+  padding: 10px 8px;
+  border-left: #898989;
+  border-right: #898989;
+}
+
 #team-moscow-content h1, h2, h3, h4, h5 {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
 padding: 0;
+}
+
+#team-moscow-content #sponsors {
+  margin-bottom: 30px;
+}
+
+#team-moscow-content #sponsors img {
+  width: 100%;
 }
 
 #team-moscow-content {
@@ -295,6 +340,7 @@ tfoot tr td {
 #team-moscow-content.default #main-container > .wrapper-columns .left-menu {
   position: sticky;
   top: 40px;
+  margin-left: 0;
 }
 
 #team-moscow-content.default #main-container > .wrapper-columns .left-menu li {
